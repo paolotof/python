@@ -24,7 +24,7 @@ lists[4:]
 #  check out the list methods. 
 stuff = list() # starts an empty list
 stuff.append('book')
-stuff,append(99)
+stuff.append(99)
 
 # is something in a list?
 some = [1, 2,3, 4, 9]
@@ -67,7 +67,7 @@ print len(thing)
 fhand = open('mbox-short.txt')
 for line in fhand:
   line = line.rstrip()
-  if not line.startwith('From'):continue
+  if not line.startswith('From'):continue
   words = line.split()
   print words[2]
 # the double split pattern
