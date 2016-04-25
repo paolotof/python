@@ -57,7 +57,7 @@ y = re.findall('^F.+:', line)
 # first character in the match is an 'F', one or more characters, Last character in the match is a ':'
 y = re.findall('^F.+?:', line) # don't be greedy, just get the first one that matches the criteria
 
-# estract e-mail address from string:
+# extract e-mail address from string:
 
 \S+@\S+ # at least one non-whitespace character around the '@' character
 

@@ -55,7 +55,7 @@ y = re.findall('\S+@\S+', x)
 # parenthesis indicate where to start or end with the search. If we use the parenthesis we want everything that matches
 y = re.findall('~From (\S+@\S+)', x)# starts with From_ and then (\S+@\S+). And it will extract only the things between the parenthesis. Parenthesis allows to make a long regular expression and return only the part between parenthesis. 
 
-# extract a host name: Look through the string until you find an @ sign, then the parenthesis says to start extracting. Then there is the square braket that says if the character is not a blank, then the * says match any of them: E.g. extract any non blank character from the @ sing to the the next blank character: '@([^ ]*)'
+# extract a host name: Look through the string until you find an @ sign, then the parenthesis says to start extracting. Then there is the square bracket that says if the character is not a blank, then the * says match any of them: E.g. extract any non blank character from the @ sing to the the next blank character: '@([^ ]*)'
 y = re.findall('@([^ ]*)', x) # alternatively
 
 y = re.findall('^From .^@([^ ]*)', x) # starts with From_ (so that is From + space character) then followed by any number of characters, then find an #@ sign and then start extracting as long as there is a non-blank. What are you interesting in matching and what are you interested in extracting? 
@@ -72,7 +72,7 @@ for line in hand:
     
 print 'Maximum: ', max(numlist)
 
-# to use the $ sign as dollar sign you prepend it with a backslash
+# to use the $ sign as dollar sign you pre-pend it with a backslash
 
 # \$[0-9.]+ # real dollar sign followed by a digit or period, at least one or more
 
